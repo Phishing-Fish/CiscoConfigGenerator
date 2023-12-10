@@ -1,0 +1,37 @@
+switches: 
+  - name: Switch0
+    interfaces:
+      - name: vlan 10
+        description: PC_VLAN
+      - name: vlan 20
+        description: LAPTOP_VLAN
+      - name: fa0/1-2
+        type: trunk
+  - name: Switch1
+    interfaces:
+      - name: vlan 10
+        description: PC_VLAN
+      - name: vlan 20
+        description: LAPTOP_VLAN
+      - name: fa0/1
+        type: trunk
+      - name: fa0/2
+        type: access
+        vlan: 10
+      - name: fa0/3
+        type: access
+        vlan: 20
+  - name: Switch2
+    interfaces:
+      - name: vlan 10
+        description: PC_VLAN
+      - name: vlan 20
+        description: LAPTOP_VLAN
+      - name: fa0/1
+        type: trunk
+      - name: fa0/2
+        type: access
+        vlan: 10
+      - name: fa0/3
+        type: access
+        vlan: 20

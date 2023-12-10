@@ -1,0 +1,14 @@
+{%- for switch in switches %}
+===
+Configuration for {{ switch.name }}
+!
+{%- for interface in switch.interfaces %}
+interface {{ interface.name }}
+  description {{ interface.description | default("NO DESCRIPTION") }}
+  ip address {{ interface.address }}
+  no shutdown
+!
+{%- endfor %}
+!
+{%- endfor %}
+!
